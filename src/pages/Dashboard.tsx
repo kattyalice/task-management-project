@@ -2,9 +2,12 @@ import { useEffect } from 'react';
 import { useTasksContext } from '../context/TaskProvider';
 import { fetchTasks } from '../api/tasks';
 import { Link } from 'react-router-dom';
-import '../index.css'
+import '../index.css';
 
 export function Dashboard() {
+  // 🔎 DEBUG LINE — this tells us if Dashboard is ever reached
+  console.log("AUTH CHECK: Dashboard rendered");
+
   const { state, dispatch } = useTasksContext();
 
   useEffect(() => {
